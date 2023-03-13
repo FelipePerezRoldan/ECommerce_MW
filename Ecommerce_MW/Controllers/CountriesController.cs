@@ -54,7 +54,7 @@ namespace Ecommerce_MW.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Id,CreateDate,ModifiedDate")] Country country)
+        public async Task<IActionResult> Create(/*[Bind("Name,Id,CreateDate,ModifiedDate")]*/ Country country) //bind engage the country object and his fields
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace Ecommerce_MW.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Name,Id,CreateDate,ModifiedDate")] Country country)
+        public async Task<IActionResult> Edit(Guid id, /*[Bind("Name,Id,CreateDate,ModifiedDate")]*/ Country country)
         {
             if (id != country.Id)
             {
